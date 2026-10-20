@@ -1,0 +1,11 @@
+Restaurant Bill Calculator
+
+What are the steps?
+1. 
+2. 
+3.
+
+Break this down into smaller parts that can become procedures:
+1. 
+2. 
+3.

@@ -1,0 +1,13 @@
+In our Pictures folder we have 250 image files.
+We want to create backup copies of the images before we social-mediaIZE them.
+Manually creating 250 copies of files is very boring, so we will automate it.
+
+Write pseudocode for how to automate this process.
+
+Inputs: Images, folder path
+Process: Use the 250 orignal image files to create backup copies.
+Outputs: New folder with a copy of each of the 250 images
+
+Constraints: (Any rules or limitations)
+Edge cases: (Missing / invalid items, conflicting constraints, unexpected values)
+

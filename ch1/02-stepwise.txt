@@ -1,0 +1,33 @@
+Restaurant Bill Calculator
+
+What are the steps?
+1. Get the bill details
+2. Calculate the total
+3. Display the result
+
+Break this down into smaller parts that can become procedures:
+1. Get the bill details
+        Get the menu price
+        Get the tax rate
+        Get the tip rate
+2. Calculate the total
+        Calculate the tax amount
+        Calculate the tip amount
+        Add them to the menu price
+3. Display the result
+
+// Main Program
+INPUT menuPrice
+INPUT taxRate
+INPUT tipRate
+
+totalBill = calculateTotal(menuPrice, taxRate, tipRate)
+DISPLAY totalBill
+
+// Procedure: calculateTotal
+FUNCTION calculateTotal(menuPrice, taxRate, tipRate):
+    taxAmount = menuPrice * taxRate
+    tipAmount = menuPrice * tipRate
+    total = menuPrice + taxAmount + tipAmount
+    RETURN total
+

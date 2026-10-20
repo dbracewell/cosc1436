@@ -1,0 +1,29 @@
+A regional bank wants to speed up its mortgage pre-approval process. They have hired you to write an "expert system" which is a simple AI program that mimics a human loan officer's decision-making. The system evaluates an applicant based on two factors: their credit score and their annual income.
+
+The Loan Officer's Rules:
+The program must strictly follow this business logic:
++ Automatic Denial: If the applicant's credit score is below 620, they are automatically "DENIED".
++ Automatic Approval: If the credit score is 620 or higher and their income is at least $60,000, they are "APPROVED".
++ Manual Review: If they have a good credit score (620+) but make less than $60,000, they don't automatically fail, but a human needs to look at the file. The status should be "MANUAL REVIEW".
+
+// 1. Define the bank's minimum requirements
+SET min_credit TO _________
+SET min_income TO _________
+
+// 2. Get the current applicant's data from the loan officer
+_________ applicant_credit 
+_________ applicant_income 
+
+// 3. First Rule: Check for automatic denial
+IF applicant_credit < _________ THEN
+    PRINT "Loan Status: _________"
+
+// 4. Second Rule: Check for automatic approval
+ELSE IF applicant_credit >= min_credit _________ applicant_income >= _________ THEN
+    PRINT "Loan Status: APPROVED"
+
+// 5. Final Rule: Catch everyone else for human review
+_________
+    PRINT "Loan Status: MANUAL REVIEW"
+
+END IF

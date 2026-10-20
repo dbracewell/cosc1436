@@ -1,0 +1,52 @@
+A corporate web server was breached overnight. Digital forensics investigators suspect a "brute-force attack," where a hacker repeatedly guesses passwords until they gain access. Investigators have isolated a suspicious IP address (192.168.1.105) and dumped the server's authentication logs into a text file named "server_logs.txt".
+
+Sample Data:
+[02:14:01] IP: 192.168.1.105 | USER: root  | STATUS: FAILED
+[02:14:03] IP: 192.168.1.105 | USER: admin | STATUS: FAILED
+.
+.
+.
+[02:14:05] IP: 192.168.1.133 | USER: user1 | STATUS: SUCCESS
+[02:14:08] IP: 192.168.1.105 | USER: admin | STATUS: FAILED
+
+Our Task:
+Complete a pseudocode script that reads the log file line by line, counts how many times the suspicious IP address failed to log in, and triggers an alert if the failures exceed a designated security threshold (5 attempts).
+
+// 1. Initialize our counter variable to start at zero
+SET failed_attempts TO _______
+
+// 2. Set the threshold limit for a security alert
+SET alert_limit TO _______
+
+// 3. Define the suspicious IP address we are investigating
+SET target_ip TO "____________"
+
+// 4. Open the digital evidence file
+OPEN "_______" AS log_file
+
+// 5. Loop through the evidence file line by line
+_______ ______ line IN _______ DO
+
+    // Extract the IP and status from the current line of the log
+    current_ip = GET_IP(line)
+    current_status = GET_STATUS(line)
+
+    // 6. Check if the IP matches our target AND the login failed
+    IF current_ip == target_ip AND current_status == "_____" THEN
+        
+        // 7. Add 1 to our counter variable
+        failed_attempts = ailed_attempts + ______
+        
+    END IF
+
+END FOR
+
+// 8. After reading the whole file, check if attempts reached the limit
+IF failed_attempts >= _______ THEN
+    PRINT "ALERT: Brute force attack detected from " + target_ip
+ELSE
+    PRINT "Activity normal for " + target_ip
+END IF
+
+// 9. Always close the evidence file to preserve integrity
+CLOSE _________
